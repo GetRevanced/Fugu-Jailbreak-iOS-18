@@ -10,6 +10,7 @@ Fugu18 supports all arm64e devices (iPhone 11 and newer) on iOS 18 up to iOS 18.
 Old arm64 devices (iPhone 10, iPhone 8, ...) are not supported at all. Use Palera1n or something similar.
 
 # Download + Guide
+<a href="https://fugu-jailbreak.com/jailbreak/how-to-jailbreak-ios-18-0-18-2-1-on-iphone-xs-to-iphone-16-with-fugu18-jailbreak/">You can download Fugu18 jailbreak IPA here.</a>
 
 # Features
 
