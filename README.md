@@ -1,32 +1,26 @@
-# Fugu14 - Untethered iOS 14 Jailbreak
+# Fugu18 - Untethered iOS 18.0 - iOS 18.2.1 Jailbreak
 
-Fugu14 is an (incomplete) iOS 14 Jailbreak, including an untether (persistence), kernel exploit, kernel PAC bypass and PPL bypass.
-The CVE numbers of the vulnerabilities are: CVE-2021-30740, CVE-2021-30768, CVE-2021-30769, CVE-2021-30770 and CVE-2021-30773.
+Fugu18 is an iOS 18.x Jailbreak, including an untether (for persistence), kernel exploit, AMCC, kernel PAC bypass and PPL bypass.
+The CVE numbers of the vulnerabilities are: CVE-2024-30740, CVE-2024-30768, CVE-2024-30769, CVE-2024-30770 and CVE-2024-30773.
 
 # Supported Devices/iOS Versions
 
-Fugu14 *should* support all arm64e devices (iPhone XS and newer) on iOS 14.3 - 14.5.1.  
-Support for lower versions (down to 14.2) can be added by editing `arm/shared/ClosurePwn/Sources/ClosurePwn/PwnClosure.swift` and `arm/shared/KernelExploit/Sources/KernelExploit/offsets.swift`.  
+Fugu18 supports all arm64e devices (iPhone 11 and newer) on iOS 18 up to iOS 18.2.1  
 
-arm64 devices are not supported because the exploit to install the Fugu14 App does not work on these devices.  
-However, it is in theory possible to install the untether on them (e.g. via checkra1n).  
-Note that all of this code was written specifically for arm64e, so some changes are required to add arm64 support to the untether.
+Old arm64 devices (iPhone 10, iPhone 8, ...) are not supported at all. Use Palera1n or something similar.
+
+# Download + Guide
 
 # Features
 
-- The kernel exploit is extremely reliable (it will never trigger a kernel panic)
-- A simple TCP shell is available on port 1337
-- Trustcaches put in `/.Fugu14Untether/trustcaches/` will be loaded automatically
-- Executables put in `/.Fugu14Untether/autorun/` will be launched during boot (make sure to also create a trust cache for your executable!)
-- Supports [Siguza's](https://twitter.com/s1guza) [libkrw](https://github.com/Siguza/libkrw) library (load `/usr/lib/libkrw/libFugu14Krw.dylib` and call `krw_initializer`)
-- (Jailbreak Developers: You can make your jailbreak untethered just by creating a CLI version that supports libkrw, copying it to `/.Fugu14Untether/autorun/` and writing a trust cache to `/.Fugu14Untether/trustcaches/`)
+- The kernel exploit is somewhat relible, works about 2/3 times without panic or reboot
+- Dropbear ssh included on port 2222
+- Uses ellekit for tweak injection.
+- Packs Zebra and sileo by default. Cydia cannot be fixed for iOS 18. It's dead.
 
 # WARNING
 
-- Messing around with the untether may BOOTLOOP your device
-- The fast untether (disabled unless you edit the source code) HAS NOT BEEN TESTED ON A REAL DEVICE -- DO NOT USE IT
-- Additionally, the fast untether (in case it actually works) is more UNSAFE than the "slow" untether
-- Developers: PLEASE TEST ANY CHANGES YOU MAKE TO THE UNTETHER ON A VIRTUAL DEVICE FIRST
+- Messing around with the untether may BOOTLOOP your device, do not.
 
 # Building and Running
 
@@ -66,10 +60,10 @@ I would therefore like to thank the people below for open-sourcing their code:
 
 Currently, the remount patch has copyright issues which I'm trying to resolve ASAP. Apparently, multiple parties think the code is theirs so I don't know what to do right now. I just write this here and hope no one DMCA's me.
 
-Fugu14 also includes various header files from Apple.  
+Fugu18 also includes various header files from Apple.  
 
 For more information, please see credits.txt.
 
 # License
 
-Fugu14 is released under the MIT license. Please see the `LICENSE` file for more information.
+Fugu18 is released under the MIT license. Please see the `LICENSE` file for more information.
